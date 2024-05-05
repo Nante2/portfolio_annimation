@@ -3,6 +3,29 @@
       margin: 0;
       padding: 0;
   }
+  html {
+    scroll-behavior: smooth;
+}
+
+/* Style de la scrollbar */
+body::-webkit-scrollbar {
+    width: 10px;
+    /* Largeur de la scrollbar */
+}
+
+/* Style de la poignée de défilement */
+body::-webkit-scrollbar-thumb {
+    background-color: #9fad74;
+    /* Couleur de la poignée de défilement */
+    border-radius: 6px;
+    /* Rayon des coins de la poignée */
+}
+
+/* Style de la piste de défilement */
+body::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Couleur de la piste de défilement */
+}
 
   header {
       background-color: #333;
@@ -39,46 +62,57 @@
   section {
       padding: 20px;
   }
+  .card img {
+    padding: auto;
+    /* Ajoute un padding de 10 pixels autour de l'image */
+}
 
-  section#accueil {
-      padding: 20px;
-      position: relative;
-      /* Pour positionner le texte par rapport à la section */
-      color: #fff;
-      /* Couleur du texte */
-      text-align: center;
-      background-image: url('../image/eni.jpg');
-      /* Chemin vers votre image de fond */
-      background-size: cover;
-      /* Redimensionner l'image pour couvrir toute la section */
-      background-position: center;
-      height: 300px;
-      /* Centrer l'image */
-  }
 
-  .Slogant {
-      font-size: 3rem;
-      /* Taille de la police du texte animé */
-      color: whitesmoke;
-      animation: slidein 3s ease-in-out infinite;
-      /* Animation slidein de 3 secondes, en boucle */
-  }
+section#accueil {
+    padding: 20px;
+    position: relative;
+    /* Pour positionner le texte par rapport à la section */
+    color: #fff;
+    /* Couleur du texte */
+    text-align: center;
+    background-image: url('../image/eni.jpg');
+    /* Chemin vers votre image de fond */
+    background-size: cover;
+    /* Redimensionner l'image pour couvrir toute la section */
+    background-position: center;
+    height: 500px;
+    /* Centrer l'image */
+    display: flex;
+    /* Utiliser Flexbox */
+    align-items: center;
+    /* Centrer verticalement */
+    justify-content: center;
+    /* Centrer horizontalement */
+}
 
-  @keyframes slidein {
-      0% {
-          opacity: 0;
-          /* Opacité initiale à 0 */
-          transform: translateY(200px);
-          /* Décalage initial vers le bas */
-      }
+.Slogant {
+    font-size: 3rem;
+    /* Taille de la police du texte animé */
+    color: whitesmoke;
+    animation: slidein 3s ease-in-out;
+    /* Animation slidein de 3 secondes, sans répétition */
+}
 
-      100% {
-          opacity: 1;
-          /* Opacité finale à 1 */
-          transform: translateY(0);
-          /* Retour à la position initiale */
-      }
-  }
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        /* Opacité initiale à 0 */
+        transform: translateY(150px);
+        /* Décalage initial vers le bas */
+    }
+
+    100% {
+        opacity: 1;
+        /* Opacité finale à 1 */
+        transform: translateY(0);
+        /* Retour à la position initiale */
+    }
+}
 
   /* css card */
   .card {
